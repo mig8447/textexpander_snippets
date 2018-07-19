@@ -9,7 +9,7 @@ A collection of TextExpander snippets I've created. Find below a category listin
     * [Product and script information](#product-and-script-information)
     * [Script options parsing](#script-options-parsing)
     * [Script templates](#script-templates)
-    * [Example from shtpl (All options enabled)](#example-from-shtpl--all-options-enabled-)
+    * [Example from shtpl (All options enabled)](#example-from-shtpl-all-options-enabled)
 
 ## Installing a group from this repository
 
