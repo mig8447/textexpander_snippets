@@ -81,11 +81,11 @@ fi</string>
 			<key>label</key>
 			<string>Strict Bash Configuration</string>
 			<key>modificationDate</key>
-			<date>2018-06-28T06:09:47Z</date>
+			<date>2018-07-19T04:47:30Z</date>
 			<key>plainText</key>
 			<string>set -euo pipefail
 # If glob doesn't return anything then the result of the globbing is null
-# instead of the string with the asterisk
+# instead of the string with the glob expressions
 #shopt -s nullglob</string>
 			<key>snippetType</key>
 			<integer>0</integer>
@@ -132,7 +132,7 @@ exit "$exit_code"
 			<key>label</key>
 			<string>Bash Script Template</string>
 			<key>modificationDate</key>
-			<date>2018-07-19T04:17:04Z</date>
+			<date>2018-07-19T06:37:36Z</date>
 			<key>plainText</key>
 			<string>%snippet:sh!%
 
@@ -141,8 +141,8 @@ exit "$exit_code"
 # Changelog:
 #    MODIFIED    VERSION    (MM/DD/YYYY)
 #    mig8447     1.0.1      07/18/2018 - Added Product Information
-#    mig8447     1.0.0      06/??/2018 - Created%fillpartend%
-
+#    mig8447     1.0.0      06/27/2018 - Created
+%fillpartend%
 %snippet:shbodytpl%</string>
 			<key>snippetType</key>
 			<integer>0</integer>
