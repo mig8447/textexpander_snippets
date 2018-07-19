@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>groupInfo</key>
+	<dict>
+		<key>expandAfterMode</key>
+		<integer>2</integer>
+		<key>groupName</key>
+		<string>Shell Scripting</string>
+	</dict>
+	<key>snippetsTE2</key>
+	<array>
+		<dict>
+			<key>abbreviation</key>
+			<string>shscriptdir</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-06-27T04:00:31Z</date>
+			<key>label</key>
+			<string>Get Real Script Directory</string>
+			<key>modificationDate</key>
+			<date>2018-07-19T03:50:03Z</date>
+			<key>plainText</key>
+			<string>script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )"
+
+if real_script_path="$( readlink -e "$script_directory/$( basename "$0" )" )"; then
+    real_script_directory="$( dirname "$real_script_path" )"
+else
+    real_script_directory="$script_directory"
+fi</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>9ECC7267-E1B7-48EC-AD51-0C609D4968F0</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>sh!</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-06-27T04:04:51Z</date>
+			<key>label</key>
+			<string>Shebang</string>
+			<key>modificationDate</key>
+			<date>2018-06-27T04:10:22Z</date>
+			<key>plainText</key>
+			<string>#!/bin/bash</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>F730C135-6277-4F18-9615-AEA80C6ED307</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>shaliason</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-06-27T04:07:55Z</date>
+			<key>label</key>
+			<string>Turn on Alias Expansion</string>
+			<key>modificationDate</key>
+			<date>2018-06-27T04:08:13Z</date>
+			<key>plainText</key>
+			<string>shopt -s expand_aliases</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>EB20C1F5-1B47-45CA-B2C7-69AD70289330</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>shstrict</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-06-27T04:05:25Z</date>
+			<key>label</key>
+			<string>Strict Bash Configuration</string>
+			<key>modificationDate</key>
+			<date>2018-06-28T06:09:47Z</date>
+			<key>plainText</key>
+			<string>set -euo pipefail
+# If glob doesn't return anything then the result of the globbing is null
+# instead of the string with the asterisk
+#shopt -s nullglob</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>92B71796-D4EE-4E06-97D1-E6B12A0D99EC</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>shbodytpl</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-06-27T04:11:14Z</date>
+			<key>label</key>
+			<string>Bash Script Template (Body)</string>
+			<key>modificationDate</key>
+			<date>2018-07-19T03:57:08Z</date>
+			<key>plainText</key>
+			<string>%snippet:shstrict%
+
+exit_code=0
+
+%fillpart:name=Include Product Information%%snippet:shproductinfo%%fillpartend%
+
+%fillpart:name=Include Script Information%%snippet:shscriptinfo%%fillpartend%
+%snippet:shscriptdir%
+
+%fillpart:name=Include Default Script Options%%snippet:shscriptopts%%fillpartend%
+
+exit "$exit_code"
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C55D8126-D3F5-4348-B6CC-AF93B2952B15</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>shtpl</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-06-27T04:43:49Z</date>
+			<key>label</key>
+			<string>Bash Script Template</string>
+			<key>modificationDate</key>
+			<date>2018-07-19T04:17:04Z</date>
+			<key>plainText</key>
+			<string>%snippet:sh!%
+
+%fillpart:name=Bash Template Information%# Bash Script Template Version 1.1.0
+#
+# Changelog:
+#    MODIFIED    VERSION    (MM/DD/YYYY)
+#    mig8447     1.0.1      07/18/2018 - Added Product Information
+#    mig8447     1.0.0      06/??/2018 - Created%fillpartend%
+
+%snippet:shbodytpl%</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>BD3EB8C6-3C93-4598-A509-EC86885D2D38</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>shscriptopts</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-06-28T01:24:21Z</date>
+			<key>label</key>
+			<string>Options Parsing Code including Output Mode and Help options</string>
+			<key>modificationDate</key>
+			<date>2018-07-19T04:07:22Z</date>
+			<key>plainText</key>
+			<string># Option Defaults
+verbose=false
+quiet=true
+silent=false
+
+# Options Function Definition
+function print_usage {
+    local exit_code=0
+
+    cat &lt;&lt;-USAGE
+%fillpart:name=Include Script Information%		$script_human_readable_name ($script_name) $script_version
+
+		$script_description
+
+		Usage: $script_name [OPTION]...
+%fillpartend%
+		Output Mode Options
+		    -v    Verbose mode
+		    -q    Quiet mode
+		    -s    Silent mode
+
+		Other Options
+
+		    -h    Prints this message and exits
+	USAGE
+
+    return "$exit_code"
+}
+function echo_silent {
+    local exit_code=0
+
+    if [[ "$silent" == true || "$quiet" == true || "$verbose" == true ]]; then
+        echo "${@}"
+        exit_code="$?"
+    fi
+
+    return "$exit_code"
+}
+function echo_quiet {
+    local exit_code=0
+
+    if [[ "$quiet" == true || "$verbose" == true ]]; then
+        echo "${@}"
+        exit_code="$?"
+    fi
+
+    return "$exit_code"
+}
+function echo_verbose {
+    local exit_code=0
+
+    if [[ "$verbose" == true ]]; then
+        echo "${@}"
+        exit_code="$?"
+    fi
+
+    return "$exit_code"
+}
+function redirect_command_with_mode {
+    local exit_code=0
+
+    if [[ "$silent" == true || "$quiet" == true ]]; then
+        "${@}" 1&gt;/dev/null
+        exit_code="$?"
+    elif [[ "$verbose" == true ]]; then
+        "${@}"
+        exit_code="$?"
+    fi
+
+    return "$exit_code"
+}
+
+number_of_mode_options=0
+
+# Option Parsing
+while getopts ":vqsh" option; do
+    case "$option" in
+        # Verbose
+        v)
+            number_of_mode_options=$((number_of_mode_options+1))
+
+            verbose=true
+            quiet=false
+            silent=false
+            ;;
+        # Quiet
+        q)
+            number_of_mode_options=$((number_of_mode_options+1))
+
+            verbose=false
+            quiet=true
+            silent=false
+            ;;
+        # Silent
+        s)
+            number_of_mode_options=$((number_of_mode_options+1))
+
+            verbose=false
+            quiet=false
+            silent=true
+            ;;
+        # Help
+        h)
+            print_usage
+            exit "$?"
+            ;;
+        \?)
+            echo "WARNING: Invalid option -$OPTARG" &gt;&amp;2
+            ;;
+        :)
+            echo "ERROR: Option -$OPTARG requires an argument" &gt;&amp;2
+            exit_code=1
+        ;;
+    esac
+done
+
+if [[ "$exit_code" -eq 0 ]]; then
+%fillpart:name=Include Script Information%    echo_quiet -e "$script_human_readable_name ($script_name) $script_version\n"%fillpartend%
+    if [[ "$number_of_mode_options" -gt 1 ]]; then
+        echo "WARNING: Multiple mode options passed. The last one passed will prevail" &gt;&amp;2
+    fi
+
+    # TODO: Write code to execute after Options Parsing occurred
+else
+    print_usage
+fi</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>1E74BEA7-B8EC-4E83-B220-EBD3E9D6B98D</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>shscriptinfo</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2018-06-28T01:25:15Z</date>
+			<key>label</key>
+			<string>Variables with Script's Information</string>
+			<key>modificationDate</key>
+			<date>2018-07-19T04:08:06Z</date>
+			<key>plainText</key>
+			<string>script_name='%filltext:name=Script Name:default=&lt;SCRIPT_NAME&gt;%'
+script_human_readable_name='%fillpart:name=Include Product Information%%filltext:name=Product Human-Readable Name:default=&lt;PRODUCT_HUMAN_READABLE_NAME&gt; %%fillpartend%%filltext:name=Script Long Name:default=&lt;SCRIPT_HUMAN_READABLE_NAME&gt;%'
+script_description='%filltext:name=Script Description:default=&lt;SCRIPT_DESCRIPTION&gt;%'
+script_version='%filltext:name=Script Version:default=&lt;SCRIPT_VERSION&gt;%'</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>00696100-823B-468D-A517-FACFE204D729</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>shproductinfo</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2018-07-19T03:53:06Z</date>
+			<key>label</key>
+			<string>Variables with Product's Information</string>
+			<key>modificationDate</key>
+			<date>2018-07-19T03:55:17Z</date>
+			<key>plainText</key>
+			<string>product_human_readable_name='%filltext:name=Product Human-Readable Name:default=&lt;PRODUCT_HUMAN_READABLE_NAME&gt;%'
+# To snake_case
+product_name="$( sed -re 's/\s+//g' &lt;&lt;&lt; "${product_human_readable_name,,}" )"
+product_version='%filltext:name=Product Version:default=&lt;PRODUCT_VERSION&gt;%'
+product_release='%filltext:name=Product Release:default=%'</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>F7CB346E-C244-4920-820E-2FAF8AF90B9A</string>
+		</dict>
+	</array>
+</dict>
+</plist>
