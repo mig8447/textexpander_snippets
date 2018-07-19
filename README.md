@@ -1,6 +1,24 @@
 # TextExpander Snippets
 A collection of TextExpander snippets I've created. Find below a category listing with the description of each snippets file/category and a few examples
 
+## Table of Contents
+* [Installing a group from this repository](#installing-a-group-from-this-repository)
+* [Shell (bash) Scripting](#shell-bash-scripting)
+    * [General](#general)
+    * [Bash options](#bash-options)
+    * [Product and script information](#product-and-script-information)
+    * [Script options parsing](#script-options-parsing)
+    * [Script templates](#script-templates)
+    * [Example from shtpl (All options enabled)](#example-from-shtpl--all-options-enabled-)
+
+## Installing a group from this repository
+
+1. Download one of the `.textexpander` suffixed files from the repository into a known folder (`Downloads` perhaps?)
+2. Open the TextExpander window
+3. Click on the `+` (Plus) button located in the bottom left corner of the screen and select the *Add Group from File* option in the appearing sub-menu
+4. Select the file you downloaded earlier from the opened file browser. Once imported, a folder named similar to the downloaded file will show up in your TextExpander groups
+5. Enjoy
+
 ## Shell (bash) Scripting
 
 This contains bash specific snippets that are put together in a master snippet (shtpl). Below is a listing of the snippets it contains
@@ -224,6 +242,12 @@ This contains bash specific snippets that are put together in a master snippet (
     ```
     
 ## Example from shtpl (All options enabled)
+
+Click on the below image to see a demo if the snippet in action
+
+[![Example of the shtpl snippet](http://img.youtube.com/vi/-0p3SPxDEh0/0.jpg)](http://www.youtube.com/watch?v=-0p3SPxDEh0 "Example of the shtpl snippet")
+
+Find the output of the snippet below
 
 ```
 #!/bin/bash
