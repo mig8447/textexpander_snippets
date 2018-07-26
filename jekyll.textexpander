@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>groupInfo</key>
+	<dict>
+		<key>expandAfterMode</key>
+		<integer>0</integer>
+		<key>groupName</key>
+		<string>Jekyll</string>
+	</dict>
+	<key>snippetsTE2</key>
+	<array>
+		<dict>
+			<key>abbreviation</key>
+			<string>jklfm</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2018-07-25T23:04:15Z</date>
+			<key>label</key>
+			<string>YAML Front Matter</string>
+			<key>modificationDate</key>
+			<date>2018-07-26T00:11:25Z</date>
+			<key>plainText</key>
+			<string>---
+title: "%filltext:name=Post Title%"
+date: %snippet:jkdate%
+toc: %fillpopup:name=Table of Contents?:default=true:false%%fillpart:name=Tags?:default=yes%
+tags:
+    - &lt;TAG&gt;%fillpartend%%fillpart:name=Categories?:default=yes%
+categories:
+    - &lt;CATEGORY&gt;%fillpartend%
+---</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>69678EBE-35B2-4D2A-8358-A6D9954A9224</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>jkldate</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2018-07-25T23:15:14Z</date>
+			<key>label</key>
+			<string>Date for Jekyll</string>
+			<key>modificationDate</key>
+			<date>2018-07-26T00:11:28Z</date>
+			<key>plainText</key>
+			<string>// Use the TextExpander object to appendOutput() or adjust date and time,
+// or just use the final statement as the snippet's expansion value, e.g.
+var date = new Date(); date.getFullYear()+'-'+String(date.getMonth()).padStart(2, '0')+'-'+String(date.getDate()).padStart(2, '0')+' '+String(date.getHours()).padStart(2, '0')+':'+String(date.getMinutes()).padStart(2, '0')+':'+String(date.getSeconds()).padStart(2, '0')+' '+(date.getTimezoneOffset &gt; 0 ? '+' : '-')+String(Math.floor(date.getTimezoneOffset()/60)).padStart(2, '0')+String( Math.abs(date.getTimezoneOffset())%60 ).padStart(2, '0');</string>
+			<key>snippetType</key>
+			<integer>4</integer>
+			<key>uuidString</key>
+			<string>91E536AC-28B4-4613-BCE2-A6C889D679D6</string>
+		</dict>
+	</array>
+</dict>
+</plist>
