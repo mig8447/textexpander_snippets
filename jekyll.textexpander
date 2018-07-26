@@ -25,7 +25,7 @@
 			<key>plainText</key>
 			<string>---
 title: "%filltext:name=Post Title%"
-date: %snippet:jkdate%
+date: %snippet:jkldate%
 toc: %fillpopup:name=Table of Contents?:default=true:false%%fillpart:name=Tags?:default=yes%
 tags:
     - &lt;TAG&gt;%fillpartend%%fillpart:name=Categories?:default=yes%
