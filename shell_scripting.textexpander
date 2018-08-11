@@ -21,11 +21,11 @@
 			<key>label</key>
 			<string>Get Real Script Directory</string>
 			<key>modificationDate</key>
-			<date>2018-07-19T03:50:03Z</date>
+			<date>2018-08-08T03:26:07Z</date>
 			<key>plainText</key>
 			<string>script_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )"
 
-if real_script_path="$( readlink -e "$script_directory/$( basename "$0" )" )"; then
+if real_script_path="$( readlink -e "$script_directory/$( basename "${BASH_SOURCE[0]}" )" )"; then
     real_script_directory="$( dirname "$real_script_path" )"
 else
     real_script_directory="$script_directory"
